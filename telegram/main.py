@@ -60,20 +60,29 @@ def echo_all(message):
 @bot.message_handler(commands=["set_dept"])
 def set_dept(message):
     markup = telebot.types.InlineKeyboardMarkup()#row_width=2
-    itembtn2 = telebot.types.InlineKeyboardButton(text='ECE')
-    # itembtn1 = telebot.types.KeyboardButton("CSE")
-    # itembtn3 = telebot.types.KeyboardButton('EEE')
-    # itembtn4 = telebot.types.KeyboardButton('CIVIL')
-    # itembtn5 = telebot.types.KeyboardButton('MME')
-    # itembtn6 = telebot.types.KeyboardButton('MINING')
-    # itembtn7 = telebot.types.KeyboardButton('ARCHI')
-    markup.add(itembtn2)
-    # markup.add( itembtn2, itembtn3)
-    # markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
+    itembtn2 = telebot.types.InlineKeyboardButton("ECE",callback_data="ECE")
+    itembtn1 = telebot.types.InlineKeyboardButton("CSE",callback_data="CSE")
+    itembtn3 = telebot.types.InlineKeyboardButton('EEE',callback_data="EEE")
+    itembtn4 = telebot.types.InlineKeyboardButton('CIVIL',callback_data="CIVIL")
+    itembtn5 = telebot.types.InlineKeyboardButton('MME',callback_data="MME")
+    itembtn6 = telebot.types.InlineKeyboardButton('MINING',callback_data="MINING")
+    itembtn7 = telebot.types.InlineKeyboardButton('ARCHI',callback_data="ARCHI")
+    markup.add(itembtn1)
+    markup.add( itembtn2, itembtn3)
+    markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
     # bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
     # markup = types.ReplyKeyboardRemove(selective=True)
-    bot.send_message(message.chat.id, "Setting your Department.......", reply_markup=markup,parse_mode ="Markdown")
+    bot.send_message(message.chat.id, "Setting your Department.......", reply_markup=markup)
     # bot.send_message(message.chat.id,a)
+
+
+@bot.callback_query_handler(func=lambda call: True)
+def set_dept_callback(call):
+    kb = types.InlineKeyboardMarkup()
+    cid = call.message.chat.id
+    mid = call.message.message_id
+    # if call.data == "CSE":
+    bot.edit_message_text("Setting up your Dept. as **"+call.data+"** in database", cid, mid, reply_markup=kb, parse_mode='Markdown')
 
 
 @bot.message_handler(regexp="BT17CSE0[0-9][0-9]")
