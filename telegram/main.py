@@ -75,7 +75,6 @@ def set_dept(message):
     bot.send_message(message.chat.id, "Setting your Department.......", reply_markup=markup)
     # bot.send_message(message.chat.id,a)
 
-
 @bot.callback_query_handler(func=lambda call: True)
 def set_dept_callback(call):
     kb = types.InlineKeyboardMarkup()
