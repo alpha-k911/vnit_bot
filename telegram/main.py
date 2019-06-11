@@ -57,6 +57,22 @@ def echo_all(message):
 	bot.reply_to(message, message.text)
 '''
 
+@bot.message_handler(commands=["setdept"])
+def setdept(message):
+    markup = telebot.types.ReplyKeyboardMarkup()#row_width=2
+    itembtn2 = telebot.types.KeyboardButton('ECE')
+    itembtn1 = telebot.types.KeyboardButton("CSE")
+    itembtn3 = telebot.types.KeyboardButton('EEE')
+    itembtn4 = telebot.types.KeyboardButton('CIVIL')
+    itembtn5 = telebot.types.KeyboardButton('MME')
+    itembtn6 = telebot.types.KeyboardButton('MINING')
+    itembtn7 = telebot.types.KeyboardButton('ARCHI')
+    markup.add(itembtn1)
+    markup.add( itembtn2, itembtn3)
+    markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
+    bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
+
+
 @bot.message_handler(commands=["set_dept"])
 def set_dept(message):
     markup = telebot.types.InlineKeyboardMarkup()#row_width=2
