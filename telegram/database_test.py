@@ -1,9 +1,9 @@
-import pymysql as sql
+import pymysql as sq
 
-db = sql.connect("localhost","nomad","nomad","CSE")
+db = sq.connect("localhost","nomad","nomad","CSE")
 cursor = db.cursor()
-sql = "select * from R1"
 try:
+    sql = "select * from R1"
     cursor.execute(sql)
     res = cursor.fetchall()
     for row in res:

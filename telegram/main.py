@@ -3,13 +3,10 @@ import pyjokes
 from tabula import read_pdf
 from tabula import read_pdf_with_template
 from telebot import types
-import time
-from threading import Thread
 import json
-import config
-import datetime
-import pytz
-import traceback
+import pymysql as sq
+
+
 
 
 TOKEN = "829593578:AAHlUspWbFlV287wEzXHAr3ZONjyp-EjCsQ"
@@ -41,6 +38,29 @@ def pun_command(message):
     print(message.text[-2:])
     bot.send_message(message.chat.id,pyjokes.get_joke())
 
+pp = "dcn"
+#mon_r1
+@bot.message_handler(commands=["mon_r1"])
+def pun_command(message):
+    mon_res=" error"
+    db = sq.connect("localhost", "nomad", "nomad", "CSE")
+    cursor = db.cursor()
+    sql = "select * from R1"
+    try:
+        cursor.execute(sql)
+        res = cursor.fetchall()
+        mon_res = ""
+        for row in res:
+            id = row[0]
+            time = row[1]
+            mon = row[2]
+            mon_res = mon_res + time + " " +mon + "\n"
+            print(time+mon,sep=" ")
+    except Exception as e:
+        print("err")
+        print(e)
+        # print(message.text[-2:])
+    bot.send_message(message.chat.id,mon_res)
 
 '''
 @bot.message_handler(func=lambda message: False) #cause there is no message
