@@ -62,10 +62,10 @@ def schedule_callback(call):
     print(type(call.data))
     print(call.data)
     markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
-    r1 = telebot.types.InlineKeyboardButton("R1", callback_data=11)
-    r2 = telebot.types.InlineKeyboardButton("R2", callback_data=22)
-    r3 = telebot.types.InlineKeyboardButton("R3", callback_data=33)
-    r4 = telebot.types.InlineKeyboardButton('R4', callback_data=44)
+    r1 = telebot.types.InlineKeyboardButton("R1", callback_data="1"+day)
+    r2 = telebot.types.InlineKeyboardButton("R2", callback_data="2"+day)
+    r3 = telebot.types.InlineKeyboardButton("R3", callback_data="3"+day)
+    r4 = telebot.types.InlineKeyboardButton('R4', callback_data="4"+day)
     # thurs = telebot.types.InlineKeyboardButton('R5', callback_data=5)
     # fri = telebot.types.InlineKeyboardButton('FRI', callback_data=6)
     markup.add(r1,r2)
@@ -81,12 +81,17 @@ def schedule_callback(call):
     # foo(cid,mid,kb,day)
 
 
-@bot.inline_handler(lambda call: call.data in ['R1','R2'])
-def foo(cid,mid,kb,day):
+@bot.callback_query_handler(lambda call: len(call.data) == 2)
+def foo(call):
+    kb = types.InlineKeyboardMarkup()
+    cid = call.message.chat.id
+    mid = call.message.message_id
+    day = call.data[1]
+    batch = "R" + call.data[0]
     ll = ""
     db = sq.connect("localhost", "nomad", "nomad", "CSE")
     cursor = db.cursor()
-    sql = "select * from R1"
+    sql = "select * from "+batch
     try:
         cursor.execute(sql)
         res = cursor.fetchall()
