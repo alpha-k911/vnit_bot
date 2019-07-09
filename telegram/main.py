@@ -38,30 +38,67 @@ def pun_command(message):
     print(message.text[-2:])
     bot.send_message(message.chat.id,pyjokes.get_joke())
 
-pp = "dcn"
+# pp = "dcn"
 #mon_r1
-@bot.message_handler(commands=["mon_r1"])
-def pun_command(message):
-    mon_res=" error"
+@bot.message_handler(commands=["schedule"])
+def scheduler(message):
+    markup = telebot.types.InlineKeyboardMarkup()#row_width=2
+    mon = telebot.types.InlineKeyboardButton("MON",callback_data=2)
+    tue = telebot.types.InlineKeyboardButton("TUE",callback_data=3)
+    wed = telebot.types.InlineKeyboardButton('WED',callback_data=4)
+    thurs = telebot.types.InlineKeyboardButton('THURS',callback_data=5)
+    fri = telebot.types.InlineKeyboardButton('FRI',callback_data=6)
+    markup.add(mon,tue)
+    markup.add(wed,thurs,fri)
+    bot.send_message(message.chat.id, "Choose the day....", reply_markup=markup)
+    # bot.callback_query_handler(schedule_callback)
+
+# @bot.answer_callback_query(callback_query_id=ca)
+
+# @bot.callback_query_handler(lambda call: call.data in [2,3,4,5,6])
+@bot.callback_query_handler(lambda call: True)
+def schedule_callback(call):
+    day = call.data
+    markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
+    r1 = telebot.types.InlineKeyboardButton("R1", callback_data=11)
+    r2 = telebot.types.InlineKeyboardButton("R2", callback_data=22)
+    r3 = telebot.types.InlineKeyboardButton("R3", callback_data=33)
+    r4 = telebot.types.InlineKeyboardButton('R4', callback_data=44)
+    # thurs = telebot.types.InlineKeyboardButton('R5', callback_data=5)
+    # fri = telebot.types.InlineKeyboardButton('FRI', callback_data=6)
+    markup.add(r1,r2)
+    markup.add(r3,r4)
+    # bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
+    bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
+    kb = types.InlineKeyboardMarkup()
+    cid = call.message.chat.id
+    mid = call.message.message_id
+    # if call.data == "CSE":
+    # foo(cid,mid,kb,day)
+
+
+@bot.inline_handler(lambda call: call.data in ['R1','R2'])
+def foo(cid,mid,kb,day):
+    ll = ""
     db = sq.connect("localhost", "nomad", "nomad", "CSE")
     cursor = db.cursor()
     sql = "select * from R1"
     try:
         cursor.execute(sql)
         res = cursor.fetchall()
-        mon_res = ""
         for row in res:
             id = row[0]
             time = row[1]
-            sub = row[2]
-            mon_res = mon_res + "{time: <7} {sub: <5}\n".format(time=time,sub=sub)
-            print(mon_res,sep=" ")
-            ll = mon_res
+            sub = row[int(day)]
+            ll = ll + "{time: <7} {sub: <5}\n".format(time=time, sub=sub)
+            print(ll, sep=" ")
     except Exception as e:
         print("err")
         print(e)
+        ll = "Error"
         # print(message.text[-2:])
-    bot.send_message(message.chat.id,ll)
+    bot.edit_message_text(ll, cid, mid, reply_markup=kb, parse_mode='Markdown')
+    # bot.send_message(message.chat.id,ll)
 
 
 '''
@@ -79,7 +116,7 @@ def echo_all(message):
 	bot.reply_to(message, message.text)
 '''
 
-@bot.message_handler(commands=["setdept"])
+@bot.message_handler(commands=["set_dept"])
 def setdept(message):
     markup = telebot.types.ReplyKeyboardMarkup()#row_width=2
     itembtn2 = telebot.types.KeyboardButton('ECE')
@@ -94,7 +131,7 @@ def setdept(message):
     markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
     bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
 
-
+'''
 @bot.message_handler(commands=["set_dept"])
 def set_dept(message):
     markup = telebot.types.InlineKeyboardMarkup()#row_width=2
@@ -112,7 +149,7 @@ def set_dept(message):
     # markup = types.ReplyKeyboardRemove(selective=True)
     bot.send_message(message.chat.id, "Setting your Department.......", reply_markup=markup)
     # bot.send_message(message.chat.id,a)
-
+#
 @bot.callback_query_handler(func=lambda call: True)
 def set_dept_callback(call):
     kb = types.InlineKeyboardMarkup()
@@ -120,7 +157,7 @@ def set_dept_callback(call):
     mid = call.message.message_id
     # if call.data == "CSE":
     bot.edit_message_text("Setting up your Dept. as **"+call.data+"** in database", cid, mid, reply_markup=kb, parse_mode='Markdown')
-
+'''
 
 @bot.message_handler(regexp="BT17CSE0[0-9][0-9]")
 def cse(message):
