@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="77" column="72" lean-forward="true" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+            <state relative-caret-position="276">
+              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -319,7 +319,7 @@
       <workItem from="1559727851480" duration="10030000" />
       <workItem from="1559819039288" duration="1331000" />
       <workItem from="1562385376245" duration="2772000" />
-      <workItem from="1562687948465" duration="8366000" />
+      <workItem from="1562687948465" duration="11647000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Inline Markup&quot;">
       <created>1559739495082</created>
@@ -349,11 +349,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562698609702</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="callback_handlers">
+      <created>1562698987050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562698987050</updated>
+    </task>
+    <task id="LOCAL-00006" summary="day schedule">
+      <created>1562699531908</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1562699531908</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31335000" />
+    <option name="totallyTimeSpent" value="34616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -389,7 +403,8 @@
     <MESSAGE value="&quot;Inline Markup&quot;" />
     <MESSAGE value="&quot;time table formatting&quot;" />
     <MESSAGE value="callback_handlers" />
-    <option name="LAST_COMMIT_MESSAGE" value="callback_handlers" />
+    <MESSAGE value="day schedule" />
+    <option name="LAST_COMMIT_MESSAGE" value="day schedule" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vnit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1559647305757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -398,7 +413,7 @@
     <SUITE FILE_PATH="coverage/vnit_bot$by_package__1_.coverage" NAME="by_package (1) Coverage Results" MODIFIED="1559735263273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
     <SUITE FILE_PATH="coverage/vnit_bot$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559646814080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vnit_bot$by_package.coverage" NAME="by_package Coverage Results" MODIFIED="1559735191517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562698942536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
+    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562702586940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cse226.template_777.json" />
@@ -447,8 +462,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/telegram/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="77" column="72" lean-forward="true" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+        <state relative-caret-position="276">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

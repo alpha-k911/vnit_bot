@@ -4,6 +4,7 @@ from tabula import read_pdf
 from tabula import read_pdf_with_template
 from telebot import types
 import json
+import datetime
 import pymysql as sq
 
 
@@ -21,21 +22,19 @@ print("\n[+] Working........")
 def help_command(message):
     # print(chat_ids)
     chat_ids.add(message.chat.id)
-    bot.send_message(message.chat.id,"List of Commands:\n/start\n/pun\n/help\n/set_dept\n/BT17CSE030")
+    bot.send_message(message.chat.id,"List of Commands:\nOnly for CSE:\n/start\n/pun\n/help\n/schedule\n/BT17CSE030")
 
 
 #start
 @bot.message_handler(commands=["start"])
 def start_command(message):
-    print("received")
+    # print("received")
     bot.send_message(message.chat.id,"Greetings! my dear creat0r....")
 
 
 #pun
 @bot.message_handler(commands=["pun"])
 def pun_command(message):
-    # print()
-    print(message.text[-2:])
     bot.send_message(message.chat.id,pyjokes.get_joke())
 
 # pp = "dcn"
@@ -43,11 +42,16 @@ def pun_command(message):
 @bot.message_handler(commands=["schedule"])
 def scheduler(message):
     markup = telebot.types.InlineKeyboardMarkup()#row_width=2
+    weekday = datetime.datetime.today().weekday()
+    yes = telebot.types.InlineKeyboardButton("YESTERDAY",callback_data=weekday+1)
+    tod = telebot.types.InlineKeyboardButton("TODAY",callback_data=weekday+2)
+    tom = telebot.types.InlineKeyboardButton("TOMORROW",callback_data=weekday+3)
     mon = telebot.types.InlineKeyboardButton("MON",callback_data=2)
     tue = telebot.types.InlineKeyboardButton("TUE",callback_data=3)
     wed = telebot.types.InlineKeyboardButton('WED',callback_data=4)
     thurs = telebot.types.InlineKeyboardButton('THURS',callback_data=5)
     fri = telebot.types.InlineKeyboardButton('FRI',callback_data=6)
+    markup.add(yes,tod,tom)
     markup.add(mon,tue)
     markup.add(wed,thurs,fri)
     bot.send_message(message.chat.id, "Choose the day....", reply_markup=markup)
@@ -66,19 +70,12 @@ def schedule_callback(call):
     r2 = telebot.types.InlineKeyboardButton("R2", callback_data="2"+day)
     r3 = telebot.types.InlineKeyboardButton("R3", callback_data="3"+day)
     r4 = telebot.types.InlineKeyboardButton('R4', callback_data="4"+day)
-    # thurs = telebot.types.InlineKeyboardButton('R5', callback_data=5)
-    # fri = telebot.types.InlineKeyboardButton('FRI', callback_data=6)
     markup.add(r1,r2)
     markup.add(r3,r4)
     kb = types.InlineKeyboardMarkup()
     cid = call.message.chat.id
     mid = call.message.message_id
-    # bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
-    # bot.edit_message_text(call.message.chat.id, "Choose batch....", reply_markup=markup)
     bot.edit_message_text("Choose Batch", cid, mid, reply_markup=markup)
-
-    # if call.data == "CSE":
-    # foo(cid,mid,kb,day)
 
 
 @bot.callback_query_handler(lambda call: len(call.data) == 2)
@@ -87,24 +84,28 @@ def foo(call):
     cid = call.message.chat.id
     mid = call.message.message_id
     day = call.data[1]
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     batch = "R" + call.data[0]
-    ll = ""
-    db = sq.connect("localhost", "nomad", "nomad", "CSE")
-    cursor = db.cursor()
-    sql = "select * from "+batch
-    try:
-        cursor.execute(sql)
-        res = cursor.fetchall()
-        for row in res:
-            id = row[0]
-            time = row[1]
-            sub = row[int(day)]
-            ll = ll + "{time: <7} {sub: <5}\n".format(time=time, sub=sub)
-            print(ll, sep=" ")
-    except Exception as e:
-        print("err")
-        print(e)
-        ll = "Error"
+    ll = days[int(day)-2]+" "+batch+"\n"
+    if int(day) in range(2,7):
+        db = sq.connect("localhost", "nomad", "nomad", "CSE")
+        cursor = db.cursor()
+        sql = "select * from " + batch
+        try:
+            cursor.execute(sql)
+            res = cursor.fetchall()
+            for row in res:
+                id = row[0]
+                time = row[1]
+                sub = row[int(day)]
+                ll = ll + "{time: <7} {sub: <5}\n".format(time=time, sub=sub)
+                print(ll, sep=" ")
+        except Exception as e:
+            print("err")
+            print(e)
+            ll = "Error"
+    else:
+        ll = "I guess it's a holiday, right???"
         # print(message.text[-2:])
     bot.edit_message_text(ll, cid, mid, reply_markup=kb, parse_mode='Markdown')
     # bot.send_message(message.chat.id,ll)
@@ -140,33 +141,6 @@ def setdept(message):
     markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
     bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
 
-'''
-@bot.message_handler(commands=["set_dept"])
-def set_dept(message):
-    markup = telebot.types.InlineKeyboardMarkup()#row_width=2
-    itembtn2 = telebot.types.InlineKeyboardButton("ECE",callback_data="ECE")
-    itembtn1 = telebot.types.InlineKeyboardButton("CSE",callback_data="CSE")
-    itembtn3 = telebot.types.InlineKeyboardButton('EEE',callback_data="EEE")
-    itembtn4 = telebot.types.InlineKeyboardButton('CIVIL',callback_data="CIVIL")
-    itembtn5 = telebot.types.InlineKeyboardButton('MME',callback_data="MME")
-    itembtn6 = telebot.types.InlineKeyboardButton('MINING',callback_data="MINING")
-    itembtn7 = telebot.types.InlineKeyboardButton('ARCHI',callback_data="ARCHI")
-    markup.add(itembtn1)
-    markup.add( itembtn2, itembtn3)
-    markup.add(itembtn4, itembtn5, itembtn6,itembtn7)
-    # bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
-    # markup = types.ReplyKeyboardRemove(selective=True)
-    bot.send_message(message.chat.id, "Setting your Department.......", reply_markup=markup)
-    # bot.send_message(message.chat.id,a)
-#
-@bot.callback_query_handler(func=lambda call: True)
-def set_dept_callback(call):
-    kb = types.InlineKeyboardMarkup()
-    cid = call.message.chat.id
-    mid = call.message.message_id
-    # if call.data == "CSE":
-    bot.edit_message_text("Setting up your Dept. as **"+call.data+"** in database", cid, mid, reply_markup=kb, parse_mode='Markdown')
-'''
 
 @bot.message_handler(regexp="BT17CSE0[0-9][0-9]")
 def cse(message):
@@ -211,7 +185,8 @@ def cse(message):
 def echo_all(message):
     # js = message
     bot.reply_to(message, "I didn't get....")
-    bot.send_message(message.chat.id,"List of Commands:\n/start\n/pun\n/help\n/set_dept\n/BT17CSE030")
+    # bot.send_message(message.chat.id,"List of Commands:\n/start\n/pun\n/help\n/set_dept\n/BT17CSE030")
+    help_command(message)
 
 
 
