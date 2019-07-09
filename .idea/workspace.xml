@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bf7b36-7f4f-4289-9424-57ab739fdcf7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../stock_prediction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_prediction/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vnit_bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vnit_bot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram/main.py" afterDir="false" />
     </list>
@@ -20,11 +16,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            <state relative-caret-position="216">
+              <caret line="77" column="72" lean-forward="true" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.7/dist-packages/telebot/types.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="909" column="29" lean-forward="true" selection-start-line="909" selection-start-column="29" selection-end-line="909" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -314,7 +319,7 @@
       <workItem from="1559727851480" duration="10030000" />
       <workItem from="1559819039288" duration="1331000" />
       <workItem from="1562385376245" duration="2772000" />
-      <workItem from="1562687948465" duration="2211000" />
+      <workItem from="1562687948465" duration="8366000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Inline Markup&quot;">
       <created>1559739495082</created>
@@ -330,11 +335,25 @@
       <option name="project" value="LOCAL" />
       <updated>1559739505362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;time table formatting&quot;">
+      <created>1562690231204</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562690231204</updated>
+    </task>
+    <task id="LOCAL-00004" summary="callback_handlers">
+      <created>1562698609702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1562698609702</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25180000" />
+    <option name="totallyTimeSpent" value="31335000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -368,7 +387,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Inline Markup&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Inline Markup&quot;" />
+    <MESSAGE value="&quot;time table formatting&quot;" />
+    <MESSAGE value="callback_handlers" />
+    <option name="LAST_COMMIT_MESSAGE" value="callback_handlers" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vnit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1559647305757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -377,7 +398,7 @@
     <SUITE FILE_PATH="coverage/vnit_bot$by_package__1_.coverage" NAME="by_package (1) Coverage Results" MODIFIED="1559735263273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
     <SUITE FILE_PATH="coverage/vnit_bot$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559646814080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vnit_bot$by_package.coverage" NAME="by_package Coverage Results" MODIFIED="1559735191517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562690193647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
+    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562698942536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cse226.template_777.json" />
@@ -403,16 +424,6 @@
     <entry file="file://$PROJECT_DIR$/parallel.py" />
     <entry file="file://$PROJECT_DIR$/by_package.py" />
     <entry file="file://$PROJECT_DIR$/telegram/by_package.py" />
-    <entry file="file://$PROJECT_DIR$/telegram/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../stock_prediction/main/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -424,6 +435,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.7/dist-packages/telebot/types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="909" column="29" lean-forward="true" selection-start-line="909" selection-start-column="29" selection-end-line="909" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telegram/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="77" column="72" lean-forward="true" selection-start-line="77" selection-start-column="72" selection-end-line="77" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

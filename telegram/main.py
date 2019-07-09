@@ -56,9 +56,11 @@ def scheduler(message):
 # @bot.answer_callback_query(callback_query_id=ca)
 
 # @bot.callback_query_handler(lambda call: call.data in [2,3,4,5,6])
-@bot.callback_query_handler(lambda call: True)
+@bot.callback_query_handler(lambda call: call.data in ["2","3","4","5","6"])
 def schedule_callback(call):
     day = call.data
+    print(type(call.data))
+    print(call.data)
     markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
     r1 = telebot.types.InlineKeyboardButton("R1", callback_data=11)
     r2 = telebot.types.InlineKeyboardButton("R2", callback_data=22)
@@ -68,11 +70,13 @@ def schedule_callback(call):
     # fri = telebot.types.InlineKeyboardButton('FRI', callback_data=6)
     markup.add(r1,r2)
     markup.add(r3,r4)
-    # bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
-    bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
     kb = types.InlineKeyboardMarkup()
     cid = call.message.chat.id
     mid = call.message.message_id
+    # bot.send_message(call.message.chat.id, "Choose batch....", reply_markup=markup)
+    # bot.edit_message_text(call.message.chat.id, "Choose batch....", reply_markup=markup)
+    bot.edit_message_text("Choose Batch", cid, mid, reply_markup=markup)
+
     # if call.data == "CSE":
     # foo(cid,mid,kb,day)
 
