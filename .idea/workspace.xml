@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bf7b36-7f4f-4289-9424-57ab739fdcf7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vnit_bot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock_prediction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../stock_prediction/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vnit_bot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vnit_bot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram/main.py" afterDir="false" />
     </list>
@@ -20,11 +20,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+            <state relative-caret-position="336">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../stock_prediction/main/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/telegram/database_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -63,6 +81,7 @@
         <option value="$PROJECT_DIR$/parallel.py" />
         <option value="$PROJECT_DIR$/by_package.py" />
         <option value="$PROJECT_DIR$/telegram/by_package.py" />
+        <option value="$PROJECT_DIR$/../stock_prediction/main/helpers.py" />
         <option value="$PROJECT_DIR$/telegram/main.py" />
       </list>
     </option>
@@ -80,15 +99,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="vnit_bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnit_bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnit_bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnit_bot" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnit_bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock_prediction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnit_bot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock_prediction" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stock_prediction" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -270,6 +313,8 @@
       <workItem from="1559657785300" duration="5681000" />
       <workItem from="1559727851480" duration="10030000" />
       <workItem from="1559819039288" duration="1331000" />
+      <workItem from="1562385376245" duration="2772000" />
+      <workItem from="1562687948465" duration="2211000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Inline Markup&quot;">
       <created>1559739495082</created>
@@ -289,17 +334,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20197000" />
+    <option name="totallyTimeSpent" value="25180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18890075" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19316968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -331,7 +377,7 @@
     <SUITE FILE_PATH="coverage/vnit_bot$by_package__1_.coverage" NAME="by_package (1) Coverage Results" MODIFIED="1559735263273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
     <SUITE FILE_PATH="coverage/vnit_bot$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559646814080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vnit_bot$by_package.coverage" NAME="by_package Coverage Results" MODIFIED="1559735191517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1559819125676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
+    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1562690193647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cse226.template_777.json" />
@@ -359,11 +405,25 @@
     <entry file="file://$PROJECT_DIR$/telegram/by_package.py" />
     <entry file="file://$PROJECT_DIR$/telegram/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="60" column="7" lean-forward="true" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+        <state relative-caret-position="336">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../stock_prediction/main/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/telegram/database_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>

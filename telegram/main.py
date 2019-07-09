@@ -53,20 +53,22 @@ def pun_command(message):
         for row in res:
             id = row[0]
             time = row[1]
-            mon = row[2]
-            mon_res = mon_res + time + " " +mon + "\n"
-            print(time+mon,sep=" ")
+            sub = row[2]
+            mon_res = mon_res + "{time: <7} {sub: <5}\n".format(time=time,sub=sub)
+            print(mon_res,sep=" ")
+            ll = mon_res
     except Exception as e:
         print("err")
         print(e)
         # print(message.text[-2:])
-    bot.send_message(message.chat.id,mon_res)
+    bot.send_message(message.chat.id,ll)
+
 
 '''
 @bot.message_handler(func=lambda message: False) #cause there is no message
 def saturday_message():
     now = datetime.now()
-    me = bot.get_me()
+    me = bot.get_me()+
     if (now.date().weekday() == 5) and (now.time() == time(8,0)):
         bot.send_message(me.id, 'Wake up!')
 
