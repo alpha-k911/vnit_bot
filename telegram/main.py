@@ -8,8 +8,6 @@ import datetime
 import pymysql as sq
 
 
-
-
 TOKEN = "829593578:AAHlUspWbFlV287wEzXHAr3ZONjyp-EjCsQ"
 bot = telebot.TeleBot(TOKEN)
 

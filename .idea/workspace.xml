@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48bf7b36-7f4f-4289-9424-57ab739fdcf7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+            <state relative-caret-position="321">
+              <caret line="210" column="45" lean-forward="true" selection-start-line="210" selection-start-column="45" selection-end-line="210" selection-end-column="45" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1562760598291" expanded="true" signature="3510:3533" ph="..." />
+                <marker date="1562761598311" expanded="true" signature="3508:3531" ph="..." />
               </folding>
             </state>
           </provider>
@@ -322,7 +321,7 @@
       <workItem from="1562385376245" duration="2772000" />
       <workItem from="1562687948465" duration="12495000" />
       <workItem from="1562734249267" duration="643000" />
-      <workItem from="1562757981479" duration="1618000" />
+      <workItem from="1562757981479" duration="2639000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Inline Markup&quot;">
       <created>1559739495082</created>
@@ -373,11 +372,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562702640936</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added dept time_tables">
+      <created>1562760733072</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562760733072</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37725000" />
+    <option name="totallyTimeSpent" value="38746000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -415,7 +421,8 @@
     <MESSAGE value="callback_handlers" />
     <MESSAGE value="day schedule" />
     <MESSAGE value="schedule with days" />
-    <option name="LAST_COMMIT_MESSAGE" value="schedule with days" />
+    <MESSAGE value="added dept time_tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dept time_tables" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vnit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1559647305757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -452,11 +459,11 @@
     <entry file="file://$PROJECT_DIR$/telegram/by_package.py" />
     <entry file="file://$PROJECT_DIR$/telegram/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        <state relative-caret-position="321">
+          <caret line="210" column="45" lean-forward="true" selection-start-line="210" selection-start-column="45" selection-end-line="210" selection-end-column="45" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1562760598291" expanded="true" signature="3510:3533" ph="..." />
+            <marker date="1562761598311" expanded="true" signature="3508:3531" ph="..." />
           </folding>
         </state>
       </provider>
