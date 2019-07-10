@@ -41,30 +41,53 @@ def pun_command(message):
 #mon_r1
 @bot.message_handler(commands=["schedule"])
 def scheduler(message):
+    markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
+    itembtn2 = telebot.types.InlineKeyboardButton("ECE", callback_data="2")
+    itembtn1 = telebot.types.InlineKeyboardButton("CSE", callback_data="1")
+    itembtn3 = telebot.types.InlineKeyboardButton('EEE', callback_data="3")
+    itembtn4 = telebot.types.InlineKeyboardButton('CIVIL', callback_data="4")
+    itembtn5 = telebot.types.InlineKeyboardButton('MME', callback_data="5")
+    itembtn6 = telebot.types.InlineKeyboardButton('MINING', callback_data="6")
+    itembtn7 = telebot.types.InlineKeyboardButton('ARCHI', callback_data="7")
+    markup.add(itembtn1)
+    markup.add(itembtn2, itembtn3)
+    markup.add(itembtn4, itembtn5, itembtn6, itembtn7)
+    # bot.send_message(message.chat.id, "Select your Dept.", reply_markup=markup)
+    # markup = types.ReplyKeyboardRemove(selective=True)
+    bot.send_message(message.chat.id, "Select Dept....", reply_markup=markup)
+    # bot.send_message(message.chat.id,a)
+
+@bot.callback_query_handler(lambda call: call.data in ["1","2","3","4","5","6","7"])
+def day_scheduler(call):
     markup = telebot.types.InlineKeyboardMarkup()#row_width=2
     weekday = datetime.datetime.today().weekday()
-    yes = telebot.types.InlineKeyboardButton("YESTERDAY",callback_data=weekday+1)
-    tod = telebot.types.InlineKeyboardButton("TODAY",callback_data=weekday+2)
-    tom = telebot.types.InlineKeyboardButton("TOMORROW",callback_data=weekday+3)
-    mon = telebot.types.InlineKeyboardButton("MON",callback_data=2)
-    tue = telebot.types.InlineKeyboardButton("TUE",callback_data=3)
-    wed = telebot.types.InlineKeyboardButton('WED',callback_data=4)
-    thurs = telebot.types.InlineKeyboardButton('THURS',callback_data=5)
-    fri = telebot.types.InlineKeyboardButton('FRI',callback_data=6)
+    dept = call.data
+    yes = telebot.types.InlineKeyboardButton("YESTERDAY",callback_data=str(weekday+1)+dept)
+    tod = telebot.types.InlineKeyboardButton("TODAY",callback_data=str(weekday+2)+dept)
+    tom = telebot.types.InlineKeyboardButton("TOMORROW",callback_data=str(weekday+3)+dept)
+    mon = telebot.types.InlineKeyboardButton("MON",callback_data="2"+dept)
+    tue = telebot.types.InlineKeyboardButton("TUE",callback_data="3"+dept)
+    wed = telebot.types.InlineKeyboardButton('WED',callback_data="4"+dept)
+    thurs = telebot.types.InlineKeyboardButton('THURS',callback_data="5"+dept)
+    fri = telebot.types.InlineKeyboardButton('FRI',callback_data="6"+dept)
     markup.add(yes,tod,tom)
     markup.add(mon,tue)
     markup.add(wed,thurs,fri)
-    bot.send_message(message.chat.id, "Choose the day....", reply_markup=markup)
+    kb = types.InlineKeyboardMarkup()
+    cid = call.message.chat.id
+    mid = call.message.message_id
+    bot.edit_message_text("Select day....", cid, mid, reply_markup=markup)
+    # bot.send_message(message.chat.id, "Choose the day....", reply_markup=markup)
     # bot.callback_query_handler(schedule_callback)
 
 # @bot.answer_callback_query(callback_query_id=ca)
 
 # @bot.callback_query_handler(lambda call: call.data in [2,3,4,5,6])
-@bot.callback_query_handler(lambda call: call.data in ["2","3","4","5","6"])
+@bot.callback_query_handler(lambda call: len(call.data) == 2) # in ["2","3","4","5","6"])
 def schedule_callback(call):
     day = call.data
-    print(type(call.data))
-    print(call.data)
+    # print(type(call.data))
+    # print(call.data)
     markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
     r1 = telebot.types.InlineKeyboardButton("R1", callback_data="1"+day)
     r2 = telebot.types.InlineKeyboardButton("R2", callback_data="2"+day)
@@ -75,20 +98,22 @@ def schedule_callback(call):
     kb = types.InlineKeyboardMarkup()
     cid = call.message.chat.id
     mid = call.message.message_id
-    bot.edit_message_text("Choose Batch", cid, mid, reply_markup=markup)
+    bot.edit_message_text("Choose Batch....", cid, mid, reply_markup=markup)
 
 
-@bot.callback_query_handler(lambda call: len(call.data) == 2)
+@bot.callback_query_handler(lambda call: len(call.data) == 3)
 def foo(call):
     kb = types.InlineKeyboardMarkup()
     cid = call.message.chat.id
     mid = call.message.message_id
-    day = call.data[1]
+    databases = ["","CSE","ECE","EEE","CIVIL","MME","MINING","ARCHI"]
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    database = databases[int(call.data[2])]
+    day = call.data[1]
     batch = "R" + call.data[0]
     ll = days[int(day)-2]+" "+batch+"\n"
     if int(day) in range(2,7):
-        db = sq.connect("localhost", "nomad", "nomad", "CSE")
+        db = sq.connect("localhost", "nomad", "nomad", database)
         cursor = db.cursor()
         sql = "select * from " + batch
         try:
@@ -99,11 +124,12 @@ def foo(call):
                 time = row[1]
                 sub = row[int(day)]
                 ll = ll + "{time: <7} {sub: <5}\n".format(time=time, sub=sub)
-                print(ll, sep=" ")
+                # print(ll, sep=" ")
         except Exception as e:
             print("err")
             print(e)
             ll = "Error"
+
     else:
         ll = "I guess it's a holiday, right???"
         # print(message.text[-2:])
