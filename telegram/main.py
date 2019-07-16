@@ -109,7 +109,7 @@ def foo(call):
     database = databases[int(call.data[2])]
     day = call.data[1]
     batch = "R" + call.data[0]
-    ll = days[int(day)-2]+" "+batch+"\n"
+    ll = "<b style='color:red'>"+days[int(day)-2]+" "+batch+"</b>\n\n"
     if int(day) in range(2,7):
         db = sq.connect("localhost", "nomad", "nomad", database)
         cursor = db.cursor()
@@ -121,7 +121,7 @@ def foo(call):
                 id = row[0]
                 time = row[1]
                 sub = row[int(day)]
-                ll = ll + "{time: <7} {sub: <5}\n".format(time=time, sub=sub)
+                ll = ll + "{time: <8} {sub: <13}\n".format(time=time, sub=sub)
                 # print(ll, sep=" ")
         except Exception as e:
             print("err")
@@ -131,7 +131,7 @@ def foo(call):
     else:
         ll = "I guess it's a holiday, right???"
         # print(message.text[-2:])
-    bot.edit_message_text(ll, cid, mid, reply_markup=kb, parse_mode='Markdown')
+    bot.edit_message_text(ll, cid, mid, reply_markup=kb, parse_mode='HTML')
     # bot.send_message(message.chat.id,ll)
 
 
