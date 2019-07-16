@@ -2,4 +2,8 @@
 
 A telegram bot created to provide students about their Time - Table and Grade Card details.
 
-![Department Options](/images/1.JPG | width=100)
+![Department Options](/images/1.JPG )
+![Day Options](/images/2.JPG )
+![Batch Options](/images/3.JPG )
+![Time Table](/images/4.JPG )
+![Grade - Card](/images/5.JPG )
