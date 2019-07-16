@@ -107,31 +107,34 @@ def foo(call):
     databases = ["","CSE","ECE","EEE","CIVIL","MME","MINING","ARCHI"]
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     database = databases[int(call.data[2])]
-    day = call.data[1]
-    batch = "R" + call.data[0]
-    ll = "<b style='color:red'>"+days[int(day)-2]+" "+batch+"</b>\n"
-    ll += "----------------------------\n"
-    if int(day) in range(2,7):
-        db = sq.connect("localhost", "nomad", "nomad", database)
-        cursor = db.cursor()
-        sql = "select * from " + batch
-        try:
-            cursor.execute(sql)
-            res = cursor.fetchall()
-            for row in res:
-                id = row[0]
-                time = row[1]
-                sub = row[int(day)]
-                ll = ll + "{time: <8} {sub: <13}\n".format(time=time, sub=sub)
-                # print(ll, sep=" ")
-        except Exception as e:
-            print("err")
-            print(e)
-            ll = "Error"
+    if int(call.data[2]) == 1:
+        day = call.data[1]
+        batch = "R" + call.data[0]
+        ll = "<b style='color:red'>" + days[int(day) - 2] + " " + batch + "</b>\n"
+        ll += "----------------------------\n"
+        if int(day) in range(2, 7):
+            db = sq.connect("localhost", "nomad", "nomad", database)
+            cursor = db.cursor()
+            sql = "select * from " + batch
+            try:
+                cursor.execute(sql)
+                res = cursor.fetchall()
+                for row in res:
+                    id = row[0]
+                    time = row[1]
+                    sub = row[int(day)]
+                    ll = ll + "{time: <8} {sub: <13}\n".format(time=time, sub=sub)
+                    # print(ll, sep=" ")
+            except Exception as e:
+                print("err")
+                print(e)
+                ll = "Error"
 
+        else:
+            ll = "I guess it's a holiday, right???"
+            # print(message.text[-2:])
     else:
-        ll = "I guess it's a holiday, right???"
-        # print(message.text[-2:])
+        ll = "Time - Table is yet to be added....\nSorry for inconvenience"
     bot.edit_message_text(ll, cid, mid, reply_markup=kb, parse_mode='HTML')
     # bot.send_message(message.chat.id,ll)
 
