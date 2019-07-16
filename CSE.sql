@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2019 at 06:00 PM
+-- Generation Time: Jul 16, 2019 at 03:19 PM
 -- Server version: 10.3.15-MariaDB-1
 -- PHP Version: 7.3.4-2
 
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `R1` (
   `id` int(10) NOT NULL,
-  `time` varchar(10) NOT NULL,
-  `mon` varchar(10) NOT NULL,
-  `tue` varchar(10) NOT NULL,
-  `wed` varchar(10) NOT NULL,
-  `thu` varchar(10) NOT NULL,
-  `fri` varchar(10) NOT NULL
+  `time` varchar(20) NOT NULL,
+  `mon` varchar(20) NOT NULL,
+  `tue` varchar(20) NOT NULL,
+  `wed` varchar(20) NOT NULL,
+  `thu` varchar(20) NOT NULL,
+  `fri` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -43,7 +43,14 @@ CREATE TABLE `R1` (
 --
 
 INSERT INTO `R1` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, '09-10', 'AWP', 'CO', 'CO', '---', 'AWP');
+(1, '08-09', 'TOC', '---', 'DAA', '---', '---'),
+(2, '09-10', '---', 'TOC', '---', 'NFT', 'NFT'),
+(3, '10-11', '---', '---', '---', 'IOOM', 'IOOM'),
+(4, '11-12', 'IOOM', '---', '---', 'TOC', 'OS'),
+(5, '12-01', 'NFT', 'OS', 'OS', 'DAA', '---'),
+(6, '01-02', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH'),
+(7, '02-04', 'IOOM - LAB', 'NFT - LAB', '---', '---', '---'),
+(8, '04-06', 'SOFT-LAB III', 'OS - LAB', '---', '---', '---');
 
 -- --------------------------------------------------------
 
@@ -53,12 +60,12 @@ INSERT INTO `R1` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
 
 CREATE TABLE `R2` (
   `id` int(10) NOT NULL,
-  `time` varchar(10) NOT NULL,
-  `mon` varchar(10) NOT NULL,
-  `tue` varchar(10) NOT NULL,
-  `wed` varchar(10) NOT NULL,
-  `thu` varchar(10) NOT NULL,
-  `fri` varchar(10) NOT NULL
+  `time` varchar(20) NOT NULL,
+  `mon` varchar(20) NOT NULL,
+  `tue` varchar(20) NOT NULL,
+  `wed` varchar(20) NOT NULL,
+  `thu` varchar(20) NOT NULL,
+  `fri` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -66,7 +73,14 @@ CREATE TABLE `R2` (
 --
 
 INSERT INTO `R2` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, '09-10', 'AWP', 'CO', 'CO', '---', 'AWP');
+(1, '08-09', 'TOC', '---', 'DAA', '---', '---'),
+(2, '09-10', '---', 'TOC', '---', 'NFT', 'NFT'),
+(3, '10-11', '---', '---', '---', 'IOOM', 'IOOM'),
+(4, '11-12', 'IOOM', '---', '---', 'TOC', 'OS'),
+(5, '12-01', 'NFT', 'OS', 'OS', 'DAA', '---'),
+(6, '01-02', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH'),
+(7, '02-04', 'NFT - LAB', 'IOOM - LAB', '---', '---', '---'),
+(8, '04-06', 'OS - LAB', 'SOFT-LAB III', '---', '---', '---');
 
 -- --------------------------------------------------------
 
@@ -76,12 +90,12 @@ INSERT INTO `R2` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
 
 CREATE TABLE `R3` (
   `id` int(10) NOT NULL,
-  `time` varchar(10) NOT NULL,
-  `mon` varchar(10) NOT NULL,
-  `tue` varchar(10) NOT NULL,
-  `wed` varchar(10) NOT NULL,
-  `thu` varchar(10) NOT NULL,
-  `fri` varchar(10) NOT NULL
+  `time` varchar(20) NOT NULL,
+  `mon` varchar(20) NOT NULL,
+  `tue` varchar(20) NOT NULL,
+  `wed` varchar(20) NOT NULL,
+  `thu` varchar(20) NOT NULL,
+  `fri` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -89,7 +103,14 @@ CREATE TABLE `R3` (
 --
 
 INSERT INTO `R3` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, '09-10', 'AWP', 'CO', 'CO', 'DSPD', 'AWP');
+(1, '08-09', 'TOC', '---', 'DAA', '---', '---'),
+(2, '09-10', '---', 'TOC', '---', 'NFT', 'NFT'),
+(3, '10-11', '---', '---', '---', 'IOOM', 'IOOM'),
+(4, '11-12', 'IOOM', '---', '---', 'TOC', 'OS'),
+(5, '12-01', 'NFT', 'OS', 'OS', 'DAA', '---'),
+(6, '01-02', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH'),
+(7, '02-04', '---', '---', 'IOOM - LAB', '---', 'NFT - LAB'),
+(8, '04-06', '---', '---', 'SOFT-LAB III', '---', 'OS - LAB');
 
 -- --------------------------------------------------------
 
@@ -99,12 +120,12 @@ INSERT INTO `R3` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
 
 CREATE TABLE `R4` (
   `id` int(10) NOT NULL,
-  `time` varchar(10) NOT NULL,
-  `mon` varchar(10) NOT NULL,
-  `tue` varchar(10) NOT NULL,
-  `wed` varchar(10) NOT NULL,
-  `thu` varchar(10) NOT NULL,
-  `fri` varchar(10) NOT NULL
+  `time` varchar(20) NOT NULL,
+  `mon` varchar(20) NOT NULL,
+  `tue` varchar(20) NOT NULL,
+  `wed` varchar(20) NOT NULL,
+  `thu` varchar(20) NOT NULL,
+  `fri` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -112,7 +133,14 @@ CREATE TABLE `R4` (
 --
 
 INSERT INTO `R4` (`id`, `time`, `mon`, `tue`, `wed`, `thu`, `fri`) VALUES
-(1, '09-10', 'AWP', 'CO', 'CO', 'TOC', 'AWP');
+(1, '08-09', 'TOC', '---', 'DAA', '---', '---'),
+(2, '09-10', '---', 'TOC', '---', 'NFT', 'NFT'),
+(3, '10-11', '---', '---', '---', 'IOOM', 'IOOM'),
+(4, '11-12', 'IOOM', '---', '---', 'TOC', 'OS'),
+(5, '12-01', 'NFT', 'OS', 'OS', 'DAA', '---'),
+(6, '01-02', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH', 'LUNCH'),
+(7, '02-04', '---', '---', 'NFT - LAB', '---', 'IOOM - LAB'),
+(8, '04-06', '---', '---', 'OS - LAB', '---', 'SOFT-LAB III');
 
 --
 -- Indexes for dumped tables

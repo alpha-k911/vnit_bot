@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Cryptography/.idea/Cryptography.iml" filepath="$PROJECT_DIR$/../Cryptography/.idea/Cryptography.iml" />
       <module fileurl="file://$PROJECT_DIR$/../stock_prediction/.idea/stock_prediction.iml" filepath="$PROJECT_DIR$/../stock_prediction/.idea/stock_prediction.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vnit_bot.iml" filepath="$PROJECT_DIR$/.idea/vnit_bot.iml" />
     </modules>
