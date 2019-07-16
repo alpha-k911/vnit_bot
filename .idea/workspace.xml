@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48bf7b36-7f4f-4289-9424-57ab739fdcf7" name="Default Changelist" comment="">
+    <list default="true" id="48bf7b36-7f4f-4289-9424-57ab739fdcf7" name="Default Changelist" comment="images">
       <change beforePath="$PROJECT_DIR$/../Cryptography/Vegenere/vegenere.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Cryptography/Vegenere/vegenere.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/telegram/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/telegram/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1563272454150" expanded="true" signature="3508:3531" ph="..." />
+                <marker date="1563275854210" expanded="true" signature="3508:3531" ph="..." />
               </folding>
             </state>
           </provider>
@@ -113,8 +115,8 @@
         <option value="$PROJECT_DIR$/by_package.py" />
         <option value="$PROJECT_DIR$/telegram/by_package.py" />
         <option value="$PROJECT_DIR$/../stock_prediction/main/helpers.py" />
-        <option value="$PROJECT_DIR$/telegram/main.py" />
         <option value="$PROJECT_DIR$/../Cryptography/Vegenere/vegenere.py" />
+        <option value="$PROJECT_DIR$/telegram/main.py" />
       </list>
     </option>
   </component>
@@ -340,7 +342,7 @@
       <workItem from="1562687948465" duration="12495000" />
       <workItem from="1562734249267" duration="643000" />
       <workItem from="1562757981479" duration="7815000" />
-      <workItem from="1563271941683" duration="881000" />
+      <workItem from="1563271941683" duration="2878000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Inline Markup&quot;">
       <created>1559739495082</created>
@@ -426,11 +428,32 @@
       <option name="project" value="LOCAL" />
       <updated>1563272592361</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="images">
+      <created>1563272849020</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1563272849020</updated>
+    </task>
+    <task id="LOCAL-00014" summary="images">
+      <created>1563273039121</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1563273039121</updated>
+    </task>
+    <task id="LOCAL-00015" summary="formatting">
+      <created>1563275752197</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563275752197</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44803000" />
+    <option name="totallyTimeSpent" value="46800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -471,7 +494,9 @@
     <MESSAGE value="added dept time_tables" />
     <MESSAGE value="encryption" />
     <MESSAGE value="UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI" />
+    <MESSAGE value="images" />
+    <MESSAGE value="formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/vnit_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1559647305757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -481,7 +506,7 @@
     <SUITE FILE_PATH="coverage/vnit_bot$vegenere.coverage" NAME="vegenere Coverage Results" MODIFIED="1562771931650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Cryptography/Vegenere" />
     <SUITE FILE_PATH="coverage/vnit_bot$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1559646814080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/vnit_bot$by_package.coverage" NAME="by_package Coverage Results" MODIFIED="1559735191517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1563272455968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
+    <SUITE FILE_PATH="coverage/vnit_bot$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1563275705931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/telegram" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cse226.template_777.json" />
@@ -569,11 +594,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/telegram/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="111" column="29" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
+        <state relative-caret-position="285">
+          <caret line="112" column="26" selection-start-line="112" selection-start-column="26" selection-end-line="112" selection-end-column="26" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1563272454150" expanded="true" signature="3508:3531" ph="..." />
+            <marker date="1563275854210" expanded="true" signature="3508:3531" ph="..." />
           </folding>
         </state>
       </provider>

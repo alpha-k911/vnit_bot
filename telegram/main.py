@@ -110,7 +110,7 @@ def foo(call):
     day = call.data[1]
     batch = "R" + call.data[0]
     ll = "<b style='color:red'>"+days[int(day)-2]+" "+batch+"</b>\n"
-    ll += "------------------------\n"
+    ll += "----------------------------\n"
     if int(day) in range(2,7):
         db = sq.connect("localhost", "nomad", "nomad", database)
         cursor = db.cursor()
