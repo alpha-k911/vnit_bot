@@ -27,7 +27,7 @@ def help_command(message):
 @bot.message_handler(commands=["start"])
 def start_command(message):
     # print("received")
-    bot.send_message(message.chat.id,"Greetings! Welcome.... \nMyself Ervin. Created to serve as helping hand...\nI can serve the purpose if my c0de doesn't crash....")
+    bot.send_message(message.chat.id,"Greetings! Welcome.... \nMyself Ervin. Created to serve as helping hand...\nI can serve the purpose if my c0de doesn't crash xD....\nUse /help for list of commands...")
 
 
 #pun
