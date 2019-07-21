@@ -20,14 +20,14 @@ print("\n[+] Working........")
 def help_command(message):
     # print(chat_ids)
     chat_ids.add(message.chat.id)
-    bot.send_message(message.chat.id,"List of Commands:\nOnly for CSE:\n/start\n/pun\n/help\n/schedule\n/BT17CSE030")
+    bot.send_message(message.chat.id,"List of Commands:\n/start\n/pun\n/help\n/schedule\n")
 
 
 #start
 @bot.message_handler(commands=["start"])
 def start_command(message):
     # print("received")
-    bot.send_message(message.chat.id,"Greetings! my dear creat0r....")
+    bot.send_message(message.chat.id,"Greetings! Welcome.... \nMyself Ervin. Created to serve as helping hand...\nI can serve the purpose if my c0de doesn't crash....")
 
 
 #pun
