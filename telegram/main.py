@@ -107,7 +107,7 @@ def foo(call):
     databases = ["","CSE","ECE","EEE","CIVIL","MME","MINING","ARCHI"]
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     database = databases[int(call.data[2])]
-    if int(call.data[2]) == 1:
+    if int(call.data[2]) == 1 or int(call.data[2]) == 4:
         day = call.data[1]
         batch = "R" + call.data[0]
         ll = "<b style='color:red'>" + days[int(day) - 2] + " " + batch + "</b>\n"
