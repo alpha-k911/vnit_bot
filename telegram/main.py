@@ -84,6 +84,7 @@ def day_scheduler(call):
 @bot.callback_query_handler(lambda call: len(call.data) == 2) # in ["2","3","4","5","6"])
 def schedule_callback(call):
     day = call.data
+    print(day)
     # print(type(call.data))
     # print(call.data)
     markup = telebot.types.InlineKeyboardMarkup()  # row_width=2
@@ -107,8 +108,10 @@ def foo(call):
     databases = ["","CSE","ECE","EEE","CIVIL","MME","MINING","ARCHI"]
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     database = databases[int(call.data[2])]
+    print(call.data)
     if int(call.data[2]) == 1 or int(call.data[2]) == 4:
-        day = call.data[1]
+        day = int(call.data[1])
+        day = day % 7
         batch = "R" + call.data[0]
         ll = "<b style='color:red'>" + days[int(day) - 2] + " " + batch + "</b>\n"
         ll += "----------------------------\n"
